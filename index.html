@@ -15,17 +15,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./owl.carousel.min.css">
+    <link rel="stylesheet" href="./owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
     <title>CrocoIt</title>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 48
+        }
+    </style>
 </head>
 
 <body>
     <div class="mainContainer">
+
         <div class="navContainer">
+            <div class="closeNav">&#x2716</div>
             <div class="logoContainer">
                 <span>T</span>he <span>M</span>usic <span>S</span>pace
             </div>
             <ul class="navList">
+
                 <li class="active navlistItem">Home</li>
                 <li class="navlistItem">Upcoming Event</li>
                 <li class="navlistItem">Contact Us</li>
@@ -39,6 +51,9 @@
                 </div>
                 <div class="wrapper">
                     <div class="sliderCard">
+                        <span class="material-symbols-outlined">
+                            menu_open
+                            </span>
                         <div class="introContainer">
                             <div class="introSocialsContainer">
                                 <img src="./pics/m.svg" alt="linkedIn link">
@@ -78,6 +93,20 @@
                         <div class="eventContainer">
                             <img src="./pics/Group.png" alt="decoration">
                             <div class="eventWrapper">
+                                <div class="invisableOwlSlider ">
+                                    <div class="closeSlider">&#x2716</div>
+                                    <div class="owlContainer">
+                                        <div class="owl-carousel owl-theme">
+                                            <div class="item"></div>
+                                            <div class="item"></div>
+                                            <div class="item"></div>
+                                            <div class="item"></div>
+                                            <div class="item"></div>
+                                            <div class="item"></div>
+                                            <div class="item"></div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="headerWrapper">
                                     <h1 class="headerContainer">Previous Events <span>“</span></h1>
                                     <h2>More</h2>
@@ -196,6 +225,17 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="./owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            margin: 10,
+            loop: true,
+            autoWidth: true,
+            autoHeight: true,
+            items: 5
+        })
+    </script>
 </body>
 
 </html>
