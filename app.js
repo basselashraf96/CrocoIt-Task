@@ -7,6 +7,8 @@ const closeSlider = document.querySelector('.closeSlider')
 const navToggle = document.querySelector('.sliderCard span')
 const navContainer = document.querySelector('.navContainer')
 const closeNav = document.querySelector('.closeNav')
+const arrowsHorizontal = document.querySelectorAll('.arrowHoriz')
+const sliderWrapper1 = document.querySelector('.sliderWrapper1')
 
 /************** Active Nav Logic ************************ */
 
@@ -29,14 +31,28 @@ navItems.forEach((item, index) => {
 
 let sliderIndex = 0
 arrows.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            if (index === 0) {
+                sliderIndex = sliderIndex > 0 ? sliderIndex - 1 : 4;
+            } else {
+                sliderIndex = sliderIndex < 4 ? sliderIndex + 1 : 0;
+            }
+
+            wrapper.style.transform = `translateY(${sliderIndex * -100}vh)`
+        })
+    })
+    /************** JS Slider Logic  Horizontal*************************** */
+
+let SliderHorizontalIndex = 0
+arrowsHorizontal.forEach((item, index) => {
     item.addEventListener('click', () => {
         if (index === 0) {
-            sliderIndex = sliderIndex > 0 ? sliderIndex - 1 : 3;
+            SliderHorizontalIndex = SliderHorizontalIndex > 0 ? SliderHorizontalIndex - 1 : 5;
         } else {
-            sliderIndex = sliderIndex < 3 ? sliderIndex + 1 : 0;
+            SliderHorizontalIndex = SliderHorizontalIndex < 5 ? SliderHorizontalIndex + 1 : 0;
         }
 
-        wrapper.style.transform = `translateY(${sliderIndex * -100}vh)`
+        sliderWrapper1.style.transform = `translateX(${SliderHorizontalIndex * -25}vw)`
     })
 })
 

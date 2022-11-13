@@ -85,6 +85,7 @@
 
 .pageContainer {
     flex: 8;
+    overflow: hidden;
 }
 
 
@@ -600,6 +601,80 @@
 }
 
 
+/*********************** Extra Block ******************************/
+
+.extraBlockContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.extraBlock {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider1 {
+    height: 50%;
+    width: 100%;
+    position: relative;
+}
+
+.arrowHoriz {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 203, 203);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #0A0A0A;
+}
+
+.arrowLeft {
+    top: 35%;
+    left: 10px;
+    transform: rotate(90deg);
+}
+
+.arrowRight {
+    top: 35%;
+    right: 10px;
+    transform: rotate(-90deg);
+}
+
+.sliderWrapper1 {
+    height: 100%;
+    display: flex;
+    transition: all 1s;
+    position: absolute;
+}
+
+.sliderImg1 {
+    flex: 1;
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+.sliderImg1 img {
+    height: 50%;
+    min-width: 50%;
+}
+
+.owl {
+    height: 50%;
+}
+
+
 /*********************** Footer **********************************/
 
 .footerContainer {
@@ -899,5 +974,8 @@
     }
     .sliderCard:nth-of-type(1) {
         margin-top: 50px;
+    }
+    .sliderCard:nth-of-type(5) {
+        height: 50vh;
     }
 }
